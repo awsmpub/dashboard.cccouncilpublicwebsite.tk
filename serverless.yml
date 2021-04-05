@@ -24,20 +24,6 @@ provider:
         - dynamodb:PutItem
       Resource: "arn:aws:dynamodb:*:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
-  # iam:
-  #   role:
-  #     statements:
-  #       - Effect: Allow
-  #         Action:
-  #           - dynamodb:Query
-  #           - dynamodb:Scan
-  #           - dynamodb:GetItem
-  #           - dynamodb:PutItem
-  #           - dynamodb:UpdateItem
-  #           - dynamodb:DeleteItem
-  #         Resource:
-  #           - { "Fn::GetAtt": ["StatsDynamoDBTable", "Arn" ] }
-
   environment:
     DYNAMODB_TABLE: trafficStats
 
@@ -52,8 +38,7 @@ package:
     - ops/**    
     - .serverless/**
     - package-lock.json
-    - favicon_io.zip
-    - "/.DS_Store"
+    - .DS_Store
 
 functions:
   getTrafficStat:

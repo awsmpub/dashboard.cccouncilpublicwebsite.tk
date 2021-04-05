@@ -10,8 +10,7 @@ function setStats(statName, statValue) {
   document.getElementsByClassName(statName)[0].innerHTML = statValue;
 }
 
-async function refreshStatCounts() {
-  
+async function refreshStatCounts() {  
   // Get the stat counts
   const response = await fetch(get_stats_endpoint);
   const stats = await response.json();

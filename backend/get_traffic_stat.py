@@ -25,14 +25,4 @@ def handler(event, context):
         "body": json.dumps(traffic_stats)
     }
 
-    # response = {
-    #     "statusCode": 200,
-    #     "headers": {
-    #         'Access-Control-Allow-Origin': '*',
-    #         'Access-Control-Allow-Headers': 'application/json',
-    #         'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
-    #         },
-    #     "body": json.dumps('Hello from Lambda!')
-    # }
-
     return response

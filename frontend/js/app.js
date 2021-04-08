@@ -3,7 +3,7 @@ $(document).ready(function(){
   refreshStatCounts();
 });
 
-var get_stats_endpoint = "https://2kgkqn4ohc.execute-api.ap-southeast-2.amazonaws.com/dev/stats"
+var get_stats_endpoint = "https://zslbb81661.execute-api.ap-southeast-2.amazonaws.com/dev/stats/"
 
 function setStats(statName, statValue) {
   // Get div containing stat count and set the new statValue

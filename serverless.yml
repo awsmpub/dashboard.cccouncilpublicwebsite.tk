@@ -1,7 +1,8 @@
 # serverless.yml
+# dashboard.cccouncilpublicwebsite.tk
 
-service: dashboard-api
-app: dashboard
+service: dashboard
+app: cccouncil
 org: srvlessfwrk
 
 frameworkVersion: '2'
@@ -16,13 +17,14 @@ provider:
   apiGateway:
     shouldStartNameWithService: true
 
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - dynamodb:Scan
-        - dynamodb:UpdateItem
-        - dynamodb:PutItem
-      Resource: "arn:aws:dynamodb:*:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Scan
+          Resource:            
+            - { "Fn::GetAtt": ["trafficStats", "Arn" ] }
 
   environment:
     DYNAMODB_TABLE: trafficStats

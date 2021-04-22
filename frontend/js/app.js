@@ -1,3 +1,5 @@
+// app.js
+// dashboard.cccouncilpublicwebsite.tk
 
 $(document).ready(function(){
   refreshStatCounts();

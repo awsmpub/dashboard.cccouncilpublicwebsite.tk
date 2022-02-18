@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
   refreshStatCounts();
-});
+})
 
 var get_stats_endpoint = "https://aeuh0v51q7.execute-api.ap-southeast-2.amazonaws.com/dev/stats/"
 
